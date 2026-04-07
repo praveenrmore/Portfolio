@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Praveen More | Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -201,16 +201,51 @@
     }
 
     @media (max-width: 768px) {
+      header {
+        padding: 50px 5%;
+        text-align: center;
+      }
+
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
       .hero-text h1 {
-        font-size: 40px;
+        font-size: 36px;
       }
 
       .hero-text h2 {
-        font-size: 20px;
+        font-size: 18px;
+      }
+
+      .hero-text p {
+        font-size: 15px;
+      }
+
+      .contact-card {
+        width: 100%;
+        max-width: 350px;
       }
 
       section {
-        padding: 25px;
+        padding: 25px 20px;
+      }
+
+      section h2 {
+        font-size: 26px;
+      }
+
+      .projects-grid,
+      .skills-grid,
+      .strength-grid,
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        padding: 20px;
       }
     }
   </style>
@@ -268,49 +303,34 @@
     <section>
       <h2>Projects</h2>
       <div class="projects-grid">
-
         <div class="project-card">
           <h3>Portfolio Website</h3>
-          <p>
-            Designed and developed a personal portfolio website using HTML, CSS, and JavaScript with a responsive layout and modern design.
-          </p>
+          <p>Designed and developed a personal portfolio website using HTML, CSS, and JavaScript with a responsive layout and modern design.</p>
         </div>
 
         <div class="project-card">
           <h3>Student Management System</h3>
-          <p>
-            Built using Java and SQL with features like student registration, record management, database connectivity, and CRUD operations.
-          </p>
+          <p>Built using Java and SQL with features like student registration, record management, database connectivity, and CRUD operations.</p>
         </div>
 
         <div class="project-card">
           <h3>E-commerce Frontend Website</h3>
-          <p>
-            Created a frontend shopping website using React.js with navigation bar, product cards, responsive layouts, and filtering options.
-          </p>
+          <p>Created a frontend shopping website using React.js with navigation bar, product cards, responsive layouts, and filtering options.</p>
         </div>
 
         <div class="project-card">
           <h3>Data Analysis Project</h3>
-          <p>
-            Used Python, Pandas, and Matplotlib to analyze datasets, clean data, and create charts and visual reports.
-          </p>
+          <p>Used Python, Pandas, and Matplotlib to analyze datasets, clean data, and create charts and visual reports.</p>
         </div>
-
       </div>
     </section>
 
     <section class="two-column">
-
       <div class="card-box">
         <h2>Experience</h2>
         <h3>Lowe's - Hardlines Team</h3>
-        <p>
-          Worked as a contractor and later converted to full-time employee.
-        </p>
-        <p>
-          Gained experience in customer service, teamwork, inventory handling, communication, and store operations.
-        </p>
+        <p>Worked as a contractor and later converted to full-time employee.</p>
+        <p>Gained experience in customer service, teamwork, inventory handling, communication, and store operations.</p>
       </div>
 
       <div class="card-box">
@@ -319,7 +339,6 @@
         <p>New Horizon College</p>
         <p>Completed in 2024</p>
       </div>
-
     </section>
 
     <section>
