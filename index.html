@@ -1,159 +1,242 @@
-export default function Portfolio() {
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React.js",
-    "Node.js",
-    "Java",
-    "Python",
-    "SQL",
-    "GitHub",
-    "Excel",
-    "PowerPoint",
-    "Communication",
-  ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praveen More Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-  const projects = [
-    {
-      title: "Portfolio Website",
-      description:
-        "Designed and developed a personal portfolio website using HTML, CSS, and JavaScript with responsive design.",
-    },
-    {
-      title: "Student Management System",
-      description:
-        "Built using Java and SQL with features like student registration, record management, and CRUD operations.",
-    },
-    {
-      title: "E-commerce Frontend Website",
-      description:
-        "Created a shopping website frontend using React.js with product cards, navigation, and responsive layouts.",
-    },
-    {
-      title: "Data Analysis Project",
-      description:
-        "Used Python, Pandas, and Matplotlib to analyze data and generate visual reports.",
-    },
-  ];
+    body {
+      background-color: #f1f5f9;
+      color: #1e293b;
+      line-height: 1.6;
+    }
 
-  return (
-    <div className="min-h-screen bg-slate-100 text-slate-900">
-      <header className="bg-gradient-to-r from-blue-700 to-indigo-700 text-white py-16 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h1 className="text-5xl font-bold mb-4">Praveen More</h1>
-            <p className="text-xl mb-4">
-              Fresher Frontend Developer | React Enthusiast
-            </p>
-            <p className="text-blue-100 leading-7">
-              Motivated fresher with a Bachelor of Computer Applications from
-              New Horizon College. Passionate about frontend development,
-              responsive websites, and learning new technologies.
-            </p>
-          </div>
+    header {
+      background: linear-gradient(to right, #1d4ed8, #4338ca);
+      color: white;
+      padding: 60px 20px;
+    }
 
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20">
-            <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-            <div className="space-y-3 text-blue-50">
-              <p>Email: yourname@email.com</p>
-              <p>Phone: +91 XXXXX XXXXX</p>
-              <p>LinkedIn: linkedin.com/in/yourprofile</p>
-              <p>GitHub: github.com/yourprofile</p>
-              <p>Location: Bangalore, Karnataka</p>
-            </div>
-          </div>
-        </div>
-      </header>
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-      <main className="max-w-6xl mx-auto px-6 py-12 space-y-10">
-        <section className="bg-white rounded-[30px] shadow-lg p-8">
-          <h2 className="text-3xl font-bold mb-4 text-blue-700">Professional Summary</h2>
-          <p className="text-slate-700 leading-8 text-lg">
-            Detail-oriented fresher with strong knowledge of HTML, CSS,
-            JavaScript, React.js, Node.js, Java, Python, and SQL. Skilled in
-            creating responsive web applications and solving problems with a
-            user-focused approach. Looking for an opportunity to contribute and
-            grow as a frontend developer.
-          </p>
-        </section>
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
 
-        <section className="bg-white rounded-[30px] shadow-lg p-8">
-          <h2 className="text-3xl font-bold mb-6 text-blue-700">Technical Skills</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {skills.map((skill) => (
-              <div
-                key={skill}
-                className="bg-blue-50 border border-blue-100 rounded-2xl px-4 py-3 text-center font-medium text-blue-800 shadow-sm"
-              >
-                {skill}
-              </div>
-            ))}
-          </div>
-        </section>
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
 
-        <section className="bg-white rounded-[30px] shadow-lg p-8">
-          <h2 className="text-3xl font-bold mb-6 text-blue-700">Projects</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project) => (
-              <div
-                key={project.title}
-                className="border border-slate-200 rounded-3xl p-6 hover:shadow-xl transition"
-              >
-                <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-                <p className="text-slate-600 leading-7">{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
 
-        <section className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-[30px] shadow-lg p-8">
-            <h2 className="text-3xl font-bold mb-4 text-blue-700">Experience</h2>
-            <h3 className="text-xl font-semibold mb-2">
-              Lowe's - Hardlines Team
-            </h3>
-            <p className="text-slate-700 leading-7">
-              Worked as a contractor and later converted to full-time.
-              Developed strong communication, teamwork, customer service,
-              inventory handling, and problem-solving skills in a fast-paced
-              work environment.
-            </p>
-          </div>
+    .contact-box {
+      background: rgba(255,255,255,0.1);
+      padding: 25px;
+      border-radius: 20px;
+      min-width: 280px;
+    }
 
-          <div className="bg-white rounded-[30px] shadow-lg p-8">
-            <h2 className="text-3xl font-bold mb-4 text-blue-700">Education</h2>
-            <h3 className="text-xl font-semibold mb-2">
-              Bachelor of Computer Applications (BCA)
-            </h3>
-            <p className="text-slate-700">
-              New Horizon College
-            </p>
-            <p className="text-slate-500">Completed in 2024</p>
-          </div>
-        </section>
+    section {
+      background: white;
+      margin: 30px auto;
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
 
-        <section className="bg-white rounded-[30px] shadow-lg p-8 mb-10">
-          <h2 className="text-3xl font-bold mb-4 text-blue-700">Strengths</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              "Quick Learner",
-              "Team Player",
-              "Problem Solving",
-              "Communication",
-              "Time Management",
-              "Adaptability",
-            ].map((strength) => (
-              <div
-                key={strength}
-                className="bg-slate-100 rounded-2xl px-4 py-3 text-center font-medium"
-              >
-                {strength}
-              </div>
-            ))}
-          </div>
-        </section>
-      </main>
+    h2 {
+      color: #1d4ed8;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .skills,
+    .strengths {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-box,
+    .strength-box {
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 12px;
+      text-align: center;
+      border-radius: 15px;
+      font-weight: bold;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      border: 1px solid #e2e8f0;
+      padding: 20px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container hero">
+      <div class="hero-text">
+        <h1>Praveen More</h1>
+        <p>Fresher Frontend Developer | React Enthusiast</p>
+        <p>
+          Motivated fresher with a Bachelor of Computer Applications from New Horizon College. Passionate about frontend development, responsive websites, and learning new technologies.
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Contact</h3>
+        <p>Email: yourname@email.com</p>
+        <p>Phone: +91 XXXXX XXXXX</p>
+        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        <p>GitHub: github.com/yourprofile</p>
+        <p>Location: Bangalore, Karnataka</p>
+      </div>
     </div>
-  );
-}
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Detail-oriented fresher with strong knowledge of HTML, CSS, JavaScript, React.js, Node.js, Java, Python, and SQL. Skilled in creating responsive web applications and solving problems with a user-focused approach. Looking for an opportunity to contribute and grow as a frontend developer.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">React.js</div>
+        <div class="skill-box">Node.js</div>
+        <div class="skill-box">Java</div>
+        <div class="skill-box">Python</div>
+        <div class="skill-box">SQL</div>
+        <div class="skill-box">GitHub</div>
+        <div class="skill-box">Excel</div>
+        <div class="skill-box">PowerPoint</div>
+        <div class="skill-box">Communication</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>Designed and developed a personal portfolio website using HTML, CSS, and JavaScript with responsive design.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Student Management System</h3>
+          <p>Built using Java and SQL with features like student registration, record management, and CRUD operations.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>E-commerce Frontend Website</h3>
+          <p>Created a shopping website frontend using React.js with product cards, navigation, and responsive layouts.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Data Analysis Project</h3>
+          <p>Used Python, Pandas, and Matplotlib to analyze data and generate visual reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-column">
+      <div>
+        <h2>Experience</h2>
+        <h3>Lowe's - Hardlines Team</h3>
+        <p>
+          Worked as a contractor and later converted to full-time. Developed strong communication, teamwork, customer service, inventory handling, and problem-solving skills in a fast-paced work environment.
+        </p>
+      </div>
+
+      <div>
+        <h2>Education</h2>
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p>New Horizon College</p>
+        <p>Completed in 2024</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Strengths</h2>
+      <div class="strengths">
+        <div class="strength-box">Quick Learner</div>
+        <div class="strength-box">Team Player</div>
+        <div class="strength-box">Problem Solving</div>
+        <div class="strength-box">Communication</div>
+        <div class="strength-box">Time Management</div>
+        <div class="strength-box">Adaptability</div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Praveen More. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
